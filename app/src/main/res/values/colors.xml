@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Custom colors.
+Tool https://material.io/resources/color/#!/?view.left=0&view.right=0
+-->
+<resources>
+    <color name="primaryColor">#ff6f00</color>
+    <color name="primaryLightColor">#ffa040</color>
+    <color name="primaryDarkColor">#c43e00</color>
+    <color name="secondaryColor">#ff8f00</color>
+    <color name="secondaryLightColor">#ffc046</color>
+    <color name="secondaryDarkColor">#c56000</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#E9E9EA</color>
+</resources>
