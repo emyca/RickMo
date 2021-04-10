@@ -76,9 +76,8 @@ class MainFragment : Fragment() {
         viewModel.loadData()
             ?.subscribeOn(Schedulers.io())
             ?.observeOn(AndroidSchedulers.mainThread())
-            ?.subscribe({ elements: CharacterList? -> handleResponse(elements) }) { throwable: Throwable? -> handleError(
-                throwable
-            )
+            ?.subscribe({ elements: CharacterList? -> handleResponse(elements) }) {
+                    throwable: Throwable? -> handleError(throwable)
             }?.let { disposable?.add(it) }
     }
 
