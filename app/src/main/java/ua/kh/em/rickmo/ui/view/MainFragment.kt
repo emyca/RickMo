@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -41,16 +40,10 @@ class MainFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setupToolbar()
+        //setupToolbar()
         binding.show = true
         setupRecyclerView()
         processResponse()
-    }
-
-    private fun setupToolbar() {
-        val toolbar = binding.toolbar.toolbar
-        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
-        toolbar.setNavigationIcon(R.drawable.ic_child)
     }
 
     private fun processResponse() {

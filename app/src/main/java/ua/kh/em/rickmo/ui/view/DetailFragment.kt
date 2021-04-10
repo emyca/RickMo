@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
 import ua.kh.em.rickmo.R
 import ua.kh.em.rickmo.data.model.Character
@@ -29,14 +28,7 @@ class DetailFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setupToolbar()
         handleParcel()
-    }
-
-    private fun setupToolbar() {
-        val toolbar = binding.toolbar.toolbar
-        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
-        toolbar.setNavigationIcon(R.drawable.ic_child)
     }
 
     private fun handleParcel() {
