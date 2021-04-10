@@ -20,14 +20,6 @@
             android:background="@color/gray">
 
             <include
-                android:id="@+id/toolbar"
-                layout="@layout/toolbar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:toolbar="@{1}" />
-
-            <include
                 android:id="@+id/progressbar"
                 layout="@layout/progress_bar"
                 app:progressbar="@{1}"
@@ -45,8 +37,11 @@
                 android:padding="2dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:listitem="@layout/item_main" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
