@@ -16,13 +16,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object ApiModule {
 
-    private const val BASE_URL = Constants.BASE_URL
+    private const val baseUrl = Constants.BASE_URL
 
     private fun getRetrofitInstance(): Retrofit {
         val rxAdapter: RxJava2CallAdapterFactory =
             RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io())
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(rxAdapter)
             .build()

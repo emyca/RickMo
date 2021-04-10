@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -21,7 +22,7 @@ import ua.kh.em.rickmo.utils.NetCheck
 import ua.kh.em.rickmo.utils.ToastUtil
 import java.util.*
 
-
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
     private var list = ArrayList<Character>()
