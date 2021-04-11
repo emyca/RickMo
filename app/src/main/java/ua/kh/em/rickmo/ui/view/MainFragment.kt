@@ -99,7 +99,7 @@ class MainFragment : Fragment() {
     private fun handleError(throwable: Throwable?) {
         binding.show = false
         ToastUtil.toastSimple(context, R.string.something_wrong)
-        Log.e("Sort ERROR", throwable.toString())
+        Log.e("Log ERROR", throwable.toString())
     }
 
     override fun onDestroy() {
