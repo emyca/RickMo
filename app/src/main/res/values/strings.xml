@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">RickMo</string>
     <string name="app_title">Rick and Morty</string>
+    <string name="app_detail">Character detail</string>
     <string name="img_content_desc">image</string>
     <string name="no_internet">No internet!</string>
     <string name="something_wrong">Something wrong!</string>
+    <string name="item_sort">sort</string>
 </resources>
