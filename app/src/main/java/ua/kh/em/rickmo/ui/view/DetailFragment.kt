@@ -10,14 +10,13 @@ import com.squareup.picasso.Picasso
 import ua.kh.em.rickmo.R
 import ua.kh.em.rickmo.data.model.Character
 import ua.kh.em.rickmo.databinding.FragmentDetailBinding
-import ua.kh.em.rickmo.utils.NetCheck
 import ua.kh.em.rickmo.utils.ToastUtil
+import ua.kh.em.rickmo.utils.isNetExists
 
 
 class DetailFragment : Fragment() {
 
     private var _binding: FragmentDetailBinding? = null
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -40,7 +39,7 @@ class DetailFragment : Fragment() {
     private fun handleParcel() {
         val bundle = arguments?.getParcelable("detail") as Character?
         if (bundle != null) {
-            if (NetCheck.isNetExists(context)) {
+            if (context.isNetExists()) {
                 val imageDetail: String? = bundle.image
                 val nameDetail: String? = bundle.name
                 val statusDetail: String? = bundle.status

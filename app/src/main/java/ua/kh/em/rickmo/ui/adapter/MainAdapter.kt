@@ -1,5 +1,6 @@
 package ua.kh.em.rickmo.ui.adapter
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -51,6 +52,7 @@ class MainAdapter(
         return list.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addListData(listData: ArrayList<Character>) {
         list = listData
         notifyDataSetChanged()

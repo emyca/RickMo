@@ -19,9 +19,9 @@ import ua.kh.em.rickmo.data.model.CharacterList
 import ua.kh.em.rickmo.databinding.FragmentMainBinding
 import ua.kh.em.rickmo.ui.adapter.MainAdapter
 import ua.kh.em.rickmo.ui.viewmodel.MainViewModel
-import ua.kh.em.rickmo.utils.NetCheck
 import ua.kh.em.rickmo.utils.SortUtil
 import ua.kh.em.rickmo.utils.ToastUtil
+import ua.kh.em.rickmo.utils.isNetExists
 import java.util.*
 
 @AndroidEntryPoint
@@ -31,7 +31,6 @@ class MainFragment : Fragment() {
     private var adapter: MainAdapter? = null
     private var disposable: CompositeDisposable? = null
     private var _binding: FragmentMainBinding? = null
-
     private val binding get() = _binding!!
 
     // To inflate activity menu from fragment.
@@ -63,7 +62,7 @@ class MainFragment : Fragment() {
     }
 
     private fun processResponse() {
-        if (NetCheck.isNetExists(context)) {
+        if (context.isNetExists()) {
             getData()
         } else {
             binding.show = false
