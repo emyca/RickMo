@@ -11,7 +11,7 @@ import ua.kh.em.rickmo.R
 import ua.kh.em.rickmo.data.model.Character
 import ua.kh.em.rickmo.databinding.FragmentDetailBinding
 import ua.kh.em.rickmo.utils.ToastUtil
-import ua.kh.em.rickmo.utils.isNetExists
+import ua.kh.em.rickmo.utils.isNetConn
 
 
 class DetailFragment : Fragment() {
@@ -39,7 +39,7 @@ class DetailFragment : Fragment() {
     private fun handleParcel() {
         val bundle = arguments?.getParcelable("detail") as Character?
         if (bundle != null) {
-            if (context.isNetExists()) {
+            if (context.isNetConn()) {
                 val imageDetail: String? = bundle.image
                 val nameDetail: String? = bundle.name
                 val statusDetail: String? = bundle.status

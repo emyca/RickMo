@@ -21,7 +21,7 @@ import ua.kh.em.rickmo.ui.adapter.MainAdapter
 import ua.kh.em.rickmo.ui.viewmodel.MainViewModel
 import ua.kh.em.rickmo.utils.SortUtil
 import ua.kh.em.rickmo.utils.ToastUtil
-import ua.kh.em.rickmo.utils.isNetExists
+import ua.kh.em.rickmo.utils.isNetConn
 import java.util.*
 
 @AndroidEntryPoint
@@ -62,7 +62,7 @@ class MainFragment : Fragment() {
     }
 
     private fun processResponse() {
-        if (context.isNetExists()) {
+        if (context.isNetConn()) {
             getData()
         } else {
             binding.show = false
